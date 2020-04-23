@@ -33,20 +33,19 @@ srand;
 my @array = ("Of the streets that fade in the setting sun ",
  "there must be one (which one, I can’t say) ", 
 "that I’ve already walked for the very last time ", 
- "unaware of the secret limits I obey ",                             #Limits by Jorge Luis Borges:
+ "unaware of the secret limits I obey ",  # Limits by Jorge Luis Borges:
 
-"the blinding fireball ", 
- "expands rapidly ", 
-"thirty times brighter than the sun ", 
-"when it reaches the stratosphere ", 
-"at the summit of the cloud ", 
-"and takes on the well-known mushroom shape ",  # Michihito Hachiya’s Hiroshima Diary: 
+"I wandered lonely as a cloud ", 
+ "That floats on high o'er vales and hills ", 
+"When all at once I saw a crowd ", 
+"A host, of golden daffodils ", 
+"Beside the lake, beneath the trees ", 
+"Fluttering and dancing in the breeze ",  # I Wandered Lonely as a Cloud By William Wordsworth: 
 
-"head pressed on shoulder ", 
-"hair between lips ", 
-"lay motionless without speaking ", 
-"until he moved his fingers slowly ", 
-"trying to grasp ");                                                   # Paul Goldwin’s The Mystery of the Elevator: 
+"Perhaps one morning walking in dry glassy air ", 
+"I will turn, I will see the miracle complete ", 
+"nothingness at my shoulder, the void behind ", 
+"me, with a drunkard’s terror ");  # Perhaps One Morning Walking by Montale: 
 
 
 ## example stanza
