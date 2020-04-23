@@ -30,10 +30,10 @@ print "Content-type: text/html\n\n";
 
 srand;
 
-my @array = ("while the multitude of things comes into being ",
- "I envisage their return ", 
-"although things flourish ", 
- "they all return to their roots ",                             #Lao Tzu’s Tao Te Ching:
+my @array = ("Of the streets that fade in the setting sun ",
+ "there must be one (which one, I can’t say) ", 
+"that I’ve already walked for the very last time ", 
+ "unaware of the secret limits I obey ",                             #Limits by Jorge Luis Borges:
 
 "the blinding fireball ", 
  "expands rapidly ", 
