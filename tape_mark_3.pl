@@ -1,5 +1,5 @@
 #!/usr/bin/perl -wT
-# /home/sites/www.in-vacua.com/web/cgi-bin/tapemark.pl -w
+# https://www.edgedpub.com/Tape_Mark_3.pl -w
 use strict;
 use CGI qw(:all);
 
@@ -31,21 +31,35 @@ print "Content-type: text/html\n\n";
 srand;
 
 my @array = ("Of the streets that fade in the setting sun ",
- "there must be one (which one, I can’t say) ", 
-"that I’ve already walked for the very last time ", 
- "unaware of the secret limits I obey ",  # Limits by Jorge Luis Borges:
+ "there must be one (which one, I can't say) ", 
+"that I've already walked for the very last time ", 
+ "unaware of the secret limits I obey ",
+ "There must be someone whose almighty rule ",
+"causes this hidden order to be fixed ",
+"someone who weaves and then unravels ",
+"the dreamlike shadows with which life is mixed ",  # Limits by Jorge Luis Borges:
 
 "I wandered lonely as a cloud ", 
  "That floats on high o'er vales and hills ", 
 "When all at once I saw a crowd ", 
 "A host, of golden daffodils ", 
 "Beside the lake, beneath the trees ", 
-"Fluttering and dancing in the breeze ",  # I Wandered Lonely as a Cloud By William Wordsworth: 
+"Fluttering and dancing in the breeze ",
+"Continuous as the stars that shine ",
+"And twinkle on the milky way ",
+"They stretched in never-ending line ",
+"Along the margin of a bay ",
+"Ten thousand saw I at a glance ", 
+"Tossing their heads in sprightly dance ",  # I Wandered Lonely as a Cloud By William Wordsworth: 
 
 "Perhaps one morning walking in dry glassy air ", 
 "I will turn, I will see the miracle complete ", 
 "nothingness at my shoulder, the void behind ", 
-"me, with a drunkard’s terror ");  # Perhaps One Morning Walking by Montale: 
+"me, with a drunkard's terror ",
+"Then, as on a screen, trees houses hills ", 
+"will advance swiftly in familiar illusion ", 
+"But it will be too late; and I will return, silently ", 
+"to men who do not look back, with my secret");  # Perhaps One Morning Walking by Montale: 
 
 
 ## example stanza
@@ -66,7 +80,7 @@ my @array = ("Of the streets that fade in the setting sun ",
 
 my %seen = ();
 
-$seen{int(rand(@array))}++ while scalar keys %seen<9; #a random group of lines will be chosen
+$seen{int(rand(@array))}++ while scalar keys %seen<24; #a random group of lines will be chosen
                                                               
 
 my @select = @array[keys %seen];
@@ -123,74 +137,33 @@ my ($nth) = $select[1] =~ /(?:\w+\W+){1}(\w+)/;
                     $select[8] =~ s/$last4/$last4\.<br>/; # line end break and stop added
 
 my $tape = join ' ', @select; 
-print "<html><head><title>Tape Mark 1</title>
-
+print "<html><head><title>Tape Mark 3</title>
 </head>
 <body 
 link=87CEFF
-
 VLINK=BCEE68
-
- bgcolor=\"grey\" text=\"white\">
-
+ bgcolor=\"sky blue\" text=\"white\">
 <div align=\"center\"><big style=\"font-family: arial;\"><big><big><span
- style=\"font-weight: bold;\">Tape Mark 1</span></big></big>
+ style=\"font-weight: bold;\">Tape Mark 3</span></big></big>
  
 <font face=Arial size=3>
 <br>A version of Tape Mark 1, by Nanni Balestrini<p><br><div align=\"left\"><b>$tape</b>
 <br><p>
-
-<form><input type=\"submit\" value=\"More verses\" action onSubmit=\"http://www.in-vacua.com/tzara.pl\"></form>
+<form><input type=\"submit\" value=\"Generate new poem\" action onSubmit=\"http://www.in-vacua.com/tzara.pl\"></form>
 <p><br><p><br>
 <font face=Arial size=3 text color =\"#e0e0e0\">
-Tape Mark 1 is a poem by Nanni Balestrini. It dates from 1961. It was exhibited in Cybernetic Serendipity, ICA Gallery, 1968. <br>
-It is sometimes credited as the first computer poem. It is a significant early example of computer poetry. <br>
-<br> This version has been programmed using the description in the Cybernetic Serendipity catalogue.<br>
-The original code is unavailable. The present program produces verses similar to the English translations that are still available.<br> 
-There is the occasional oddity in syntax, but according to the catalogue of Cybernetic Serendipity there were, post-computer,<br>
-'a few editorial changes in points of grammar and punctuation'.<br> 
-It is stated in the catalogue that ten elements were selected. However, on my count the number is nine (see below).<br>
-Then this raw text was divided up into six lines of metrical units. <br> The program emulates this approximately.<br><br>
 
 
 
-This is an example verse from the Cybernetic Serendipity catalogue. I have indicated where phrases start and finish: <br> <br> 
+<i>Tape Mark 3</i> is a variation of Nanni Balestrini's <i>Tape Mark 1</i><br>
+The verses of this poem are composed by the first two strophes of the following poems:<br>
+<i>Limits</i> by Jorge Luis Borges; <br>
+<i>I Wandered Lonely as a Cloud</i> by William Wordsworth;<br>
+<i>Perhaps One Morning Walking</i> by Montale; <br>
 
- Hair between lips, || they all return <br>
-          
- to their roots || in the blinding fireball || <br>
-    
- I envision their return || until he moves his fingers <br>
-                            
- slowly, || and although things flourish || <br>
-                                                                            
- takes on the well known mushroom shape || endeavouring <br>
-                                         
- to grasp ||  while the multitude of things come into being. <br><br>
+<p><br>The sourcecode is <a href='https://github.com/edgedpub/Tape-Mark-3'>here</a> and it was originally developed by <a href='http://www.in-vacua.com/cgi-bin/tapemark.pl'>Wayne Clements
 
-Here's another:<br><br>
-
-In the blinding fireball || I envisage<br>
-
-their return || when it reaches the stratosphere ||<br>
-
-while the multitude of things come into being || head pressed <br>
-
-on shoulder || thirty times brighter than the sun || <br>
-
-they all return to their roots || hair <br>
-
-between lips || takes on the well-known mushroom shape.<br><br>
-
-
-
-Balestrini sources:<br> <br>   Lao Tzu’s Tao Te Ching: 'While the multitude of things comes into being, I envisage their return. Although things flourish, they all return to their roots.'<br>
-
- Michihito Hachiya’s Hiroshima Diary: 'The blinding fireball expands rapidly, thirty times brighter than the sun. When it reaches the stratosphere, the summit of the cloud takes on the well-known mushroom shape.'<br>
-
-Paul Goldwin’s The Mystery of the Elevator: 'head pressed on shoulder, hair between lips, lay motionless without speaking, till he moved his fingers slowly, trying to grasp.' <br>
-
-<p><br>The sourcecode is <a href='/tapemark_code.txt'>here</a> <p><br> <a href='/list.html'><p><p>Home</a></html>";
+<p><br> <a href='/list.html'><p><p>Home</a></html>"; 
 
 
 # fisher yates shuffle
@@ -204,4 +177,3 @@ next() if ($i == $j);
 } #EOSub
 
 exit();
-
