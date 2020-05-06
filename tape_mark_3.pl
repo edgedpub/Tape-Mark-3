@@ -157,11 +157,11 @@ VLINK=BCEE68
 
 <i>Tape Mark 3</i> is a variation of Nanni Balestrini's <i>Tape Mark 1</i><br>
 The verses of this poem are composed by the first two strophes of the following poems:<br>
-<i>Limits</i> by Jorge Luis Borges; <br>
 <i>I Wandered Lonely as a Cloud</i> by William Wordsworth;<br>
 <i>Perhaps One Morning Walking</i> by Montale; <br>
+<i>Limits</i> by Jorge Luis Borges; <br>
 
-<p><br>The sourcecode is <a href='https://github.com/edgedpub/Tape-Mark-3'>here</a> and it was originally developed by <a href='http://www.in-vacua.com/cgi-bin/tapemark.pl'>Wayne Clements
+<p><br>The sourcecode is <a href='https://github.com/edgedpub/Tape-Mark-3'>here</a> and it was originally written by <a href='http://www.in-vacua.com/cgi-bin/tapemark.pl'>Wayne Clements</a></html>"; 
 
 <p><br> <a href='/list.html'><p><p>Home</a></html>"; 
 
