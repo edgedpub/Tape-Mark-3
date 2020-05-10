@@ -121,7 +121,7 @@ my ($nth) = $select[1] =~ /(?:\w+\W+){1}(\w+)/;
 
 (my $last3) = $select[5] =~ /(\s*\S+)\s*$/;
 
-                    $select[5] =~ s/$last3/$last3,<br>/; # line end break
+                    $select[5] =~ s/$last3/$last3<br>/; # line end break
 
 
 #                  $select[6]; ## stays unchanged
@@ -134,7 +134,75 @@ my ($nth) = $select[1] =~ /(?:\w+\W+){1}(\w+)/;
 
 (my $last4) = $select[8] =~ /(\s*\S+)\s*$/;
 
-                    $select[8] =~ s/$last4/$last4\.<br>/; # line end break and stop added
+                    $select[8] =~ s/$last4/$last4,/; # line end coma
+                    
+(my $last5) = $select[9] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[9] =~ s/$last5/$last5<br>/;  # line end break
+                    
+(my $last6) = $select[10] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[10] =~ s/$last6/$last6,<br>/; # line end break 
+                    
+ (my $last7) = $select[11] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[11] =~ s/$last7/$last7<br>/; # line end break
+                    
+(my $last8) = $select[12] =~ /(\s*\S+)\s*$/;
+
+                    $select[12] =~ s/$last8/<br>$last8/; # line break before last word
+
+(my $last9) = $select[13] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[13] =~ s/$last9/$last9<br>/;  # line end break
+                    
+(my $last10) = $select[14] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[14] =~ s/$last10/$last10,/;  # line end coma
+
+(my $last11) = $select[15] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[15] =~ s/$last11/$last11,/;  # line end coma                  
+(my $last12) = $select[14] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[14] =~ s/$last12/$last12<br>/;  # line end break
+                    
+(my $last13) = $select[14] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[14] =~ s/$last13/$last13<br/;  # line end break
+                    
+(my $last14) = $select[15] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[15] =~ s/$last14/$last14<br>/;  # line end break                    
+(my $last15) = $select[16] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[16] =~ s/$last15/$last15,/;  # line end coma
+        
+(my $last16) = $select[15] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[15] =~ s/$last16/$last16<br>/;  # line end break
+                    
+(my $last17) = $select[16] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[16] =~ s/$last17/$last17<br>/;  # line end break
+
+(my $last18) = $select[17] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[17] =~ s/$last18/$last18,/;  # line end coma
+
+(my $last19) = $select[18] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[19] =~ s/$last18/$last18,/;  # line end coma
+
+(my $last20) = $select[19] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[19] =~ s/$last20/$last20<br>/;  # line end break
+                    
+(my $last21) = $select[20] =~ /(\s*\S+)\s*$/;
+ 
+                    $select[20] =~ s/$last21/$last21<br>/;  # line end break and stop added
+
+
 
 my $tape = join ' ', @select; 
 print "<html><head><title>Tape Mark 3</title>
@@ -146,12 +214,12 @@ VLINK=BCEE68
 <div align=\"center\"><big style=\"font-family: arial;\"><big><big><span
  style=\"font-weight: bold;\">Tape Mark 3</span></big></big>
  
-<font face=Arial size=3>
+<font face=Arial size=4>
 <br>A version of Tape Mark 1, by Nanni Balestrini<p><br><div align=\"left\"><b>$tape</b>
 <br><p>
 <form><input type=\"submit\" value=\"Generate new poem\" action onSubmit=\"http://www.in-vacua.com/tzara.pl\"></form>
 <p><br><p><br>
-<font face=Arial size=3 text color =\"#e0e0e0\">
+<font face=Arial size=4 text color =\"#e0e0e0\">
 
 
 
@@ -162,8 +230,6 @@ The verses of this poem are composed by the first two strophes of the following 
 <i>Limits</i> by Jorge Luis Borges; <br>
 
 <p><br>The sourcecode is <a href='https://github.com/edgedpub/Tape-Mark-3'>here</a> and it was originally written by <a href='http://www.in-vacua.com/cgi-bin/tapemark.pl'>Wayne Clements</a></html>"; 
-
-<p><br> <a href='/list.html'><p><p>Home</a></html>"; 
 
 
 # fisher yates shuffle
