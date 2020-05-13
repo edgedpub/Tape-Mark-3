@@ -118,7 +118,6 @@ my ($nth) = $select[1] =~ /(?:\w+\W+){1}(\w+)/;
 
                     $select[4] =~ s/$last2/<br>$last2/; # line break before last word
 
-
 (my $last3) = $select[5] =~ /(\s*\S+)\s*$/;
 
                     $select[5] =~ s/$last3/$last3<br>/; # line end break
@@ -142,7 +141,7 @@ my ($nth) = $select[1] =~ /(?:\w+\W+){1}(\w+)/;
                     
 (my $last6) = $select[10] =~ /(\s*\S+)\s*$/;
  
-                    $select[10] =~ s/$last6/$last6,<br>/; # line end break 
+                    $select[10] =~ s/$last6/$last6,/; # line end coma 
                     
  (my $last7) = $select[11] =~ /(\s*\S+)\s*$/;
  
@@ -162,45 +161,45 @@ my ($nth) = $select[1] =~ /(?:\w+\W+){1}(\w+)/;
 
 (my $last11) = $select[15] =~ /(\s*\S+)\s*$/;
  
-                    $select[15] =~ s/$last11/$last11,/;  # line end coma                  
-(my $last12) = $select[14] =~ /(\s*\S+)\s*$/;
+                    $select[15] =~ s/$last11/$last11<br>/;  # line end break                 
+(my $last12) = $select[16] =~ /(\s*\S+)\s*$/;
  
-                    $select[14] =~ s/$last12/$last12<br>/;  # line end break
+                    $select[16] =~ s/$last12/$last12,/;  # line end coma
                     
-(my $last13) = $select[14] =~ /(\s*\S+)\s*$/;
+(my $last13) = $select[17] =~ /(\s*\S+)\s*$/;
  
-                    $select[14] =~ s/$last13/$last13<br/;  # line end break
+                    $select[17] =~ s/$last13/$last13<br>/;  # line end break
                     
-(my $last14) = $select[15] =~ /(\s*\S+)\s*$/;
+(my $last14) = $select[18] =~ /(\s*\S+)\s*$/;
  
-                    $select[15] =~ s/$last14/$last14<br>/;  # line end break                    
-(my $last15) = $select[16] =~ /(\s*\S+)\s*$/;
+                    $select[18] =~ s/$last14/$last14<br>/;  # line end break                    
+(my $last15) = $select[19] =~ /(\s*\S+)\s*$/;
  
-                    $select[16] =~ s/$last15/$last15,/;  # line end coma
+                    $select[19] =~ s/$last15/$last15,/;  # line end coma
         
-(my $last16) = $select[15] =~ /(\s*\S+)\s*$/;
+(my $last16) = $select[20] =~ /(\s*\S+)\s*$/;
  
-                    $select[15] =~ s/$last16/$last16<br>/;  # line end break
+                    $select[20] =~ s/$last16/$last16<br>/;  # line end break
                     
-(my $last17) = $select[16] =~ /(\s*\S+)\s*$/;
+(my $last17) = $select[21] =~ /(\s*\S+)\s*$/;
  
-                    $select[16] =~ s/$last17/$last17<br>/;  # line end break
+                    $select[21] =~ s/$last17/$last17<br>/;  # line end break
 
-(my $last18) = $select[17] =~ /(\s*\S+)\s*$/;
+(my $last18) = $select[22] =~ /(\s*\S+)\s*$/;
  
-                    $select[17] =~ s/$last18/$last18,/;  # line end coma
+                    $select[22] =~ s/$last18/$last18,/;  # line end coma
 
-(my $last19) = $select[18] =~ /(\s*\S+)\s*$/;
+(my $last19) = $select[23] =~ /(\s*\S+)\s*$/;
  
-                    $select[19] =~ s/$last18/$last18,/;  # line end coma
+                    $select[23] =~ s/$last19/$last19,/;  # line end coma
 
-(my $last20) = $select[19] =~ /(\s*\S+)\s*$/;
+(my $last20) = $select[24] =~ /(\s*\S+)\s*$/;
  
-                    $select[19] =~ s/$last20/$last20<br>/;  # line end break
+                    $select[24] =~ s/$last20/$last20<br>/;  # line end break
                     
-(my $last21) = $select[20] =~ /(\s*\S+)\s*$/;
+(my $last21) = $select[25] =~ /(\s*\S+)\s*$/;
  
-                    $select[20] =~ s/$last21/$last21<br>/;  # line end break and stop added
+                    $select[25] =~ s/$last21/$last21<br>/;  # line end break and stop added
 
 
 
@@ -217,7 +216,7 @@ VLINK=BCEE68
 <font face=Arial size=4>
 <br>A version of Tape Mark 1, by Nanni Balestrini<p><br><div align=\"left\"><b>$tape</b>
 <br><p>
-<form><input type=\"submit\" value=\"Generate new poem\" action onSubmit=\"http://www.in-vacua.com/tzara.pl\"></form>
+<form><input type=\"submit\" value=\"Generate new poem\" action onSubmit=></form>
 <p><br><p><br>
 <font face=Arial size=4 text color =\"#e0e0e0\">
 
@@ -243,3 +242,4 @@ next() if ($i == $j);
 } #EOSub
 
 exit();
+
