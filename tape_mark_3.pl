@@ -78,6 +78,7 @@ my @array = ("Of the streets that fade in the setting sun ",
 # to grasp ||  while the multitude of things come into being.
 #
 
+
 my %seen = ();
 
 $seen{int(rand(@array))}++ while scalar keys %seen<24; #a random group of lines will be chosen
@@ -90,107 +91,103 @@ shuffle(\@select);
 
                   $select[0] = ucfirst($select[0]);    #  cap first line
  
-
 (my $last0) = $select[0] =~ /(\s*\S+)\s*$/;
 
-                    $select[0] =~ s/$last0/$last0,/; # add comma 
+                    $select[0] =~ s/\Q$last0/$last0,/; # add comma 
 
-
-my ($nth) = $select[1] =~ /(?:\w+\W+){1}(\w+)/;
+(my $nth) = $select[1] =~ /(?:\w+\W+){1}(\w+)/;
 
                    $select[1] =~ s/$nth/$nth <br>/;    # line  broken after second word
 
-
 (my $last1) = $select[2] =~ /(\s*\S+)\s*$/;
 
-                    $select[2] =~ s/$last1/$last1<br>/; # line end break
+                    $select[2] =~ s/\Q$last1/$last1<br>/; # line end break
 
-                    
 (my $last3a) = $select[3] =~ /(\s*\S+)\s*$/;
 
-                    $select[3] =~ s/$last3a/$last3a<br>/; # line end break
+                    $select[3] =~ s/\Q$last3a/$last3a<br>/; # line end break
 
 (my $last4a) = $select[4] =~ /(\s*\S+)\s*$/;
 
-                    $select[4] =~ s/$last4a/$last4a,/; # line end comma
+                    $select[4] =~ s/\Q$last4a/$last4a,/; # line end comma
 
 (my $last2) = $select[4] =~ /(\s*\S+)\s*$/;
 
-                    $select[4] =~ s/$last2/<br>$last2/; # line break before last word
+                    $select[4] =~ s/\Q$last2/<br>$last2/; # line break before last word
 
 (my $last3) = $select[5] =~ /(\s*\S+)\s*$/;
 
-                    $select[5] =~ s/$last3/$last3<br>/; # line end break
+                    $select[5] =~ s/\Q$last3/$last3<br>/; # line end break
 
 (my $last4) = $select[6] =~ /(\s*\S+)\s*$/;
 
-                    $select[6] =~ s/$last4/$last4<br>/; # line end break
+                    $select[6] =~ s/\Q$last4/$last4<br>/; # line end break
                     
 (my $last5) = $select[7] =~ /(\s*\S+)\s*$/;
  
-                    $select[7] =~ s/$last5/$last5<br>/;  # line end break
+                    $select[7] =~ s/\Q$last5/$last5<br>/;  # line end break
                     
 (my $last6) = $select[8] =~ /(\s*\S+)\s*$/;
  
-                    $select[8] =~ s/$last6/$last6<br>/; # line end break
+                    $select[8] =~ s/\Q$last6/$last6<br>/; # line end break
                     
  (my $last7) = $select[9] =~ /(\s*\S+)\s*$/;
  
-                    $select[9] =~ s/$last7/$last7<br>/; # line end break
+                    $select[9] =~ s/\Q$last7/$last7<br>/; # line end break
                     
 (my $last8) = $select[10] =~ /(\s*\S+)\s*$/;
 
-                    $select[10] =~ s/$last8/<br>$last8/; # line break before last word
+                    $select[10] =~ s/\Q$last8/<br>$last8/; # line break before last word
 
 (my $last9) = $select[11] =~ /(\s*\S+)\s*$/;
  
-                    $select[11] =~ s/$last9/$last9<br>/;  # line end break
+                    $select[11] =~ s/\Q$last9/$last9<br>/;  # line end break
                     
 (my $last10) = $select[12] =~ /(\s*\S+)\s*$/;
  
-                    $select[12] =~ s/$last10/$last10<br>/;  # line end break
+                    $select[12] =~ s/\Q$last10/$last10<br>/;  # line end break
 
 (my $last11) = $select[13] =~ /(\s*\S+)\s*$/;
  
-                    $select[13] =~ s/$last11/$last11<br>/;  # line end break                 
+                    $select[13] =~ s/\Q$last11/$last11<br>/;  # line end break                 
 (my $last12) = $select[14] =~ /(\s*\S+)\s*$/;
  
-                    $select[14] =~ s/$last12/$last12<br>/;  # line end break
+                    $select[14] =~ s/\Q$last12/$last12<br>/;  # line end break
                     
 (my $last13) = $select[15] =~ /(\s*\S+)\s*$/;
  
-                    $select[15] =~ s/$last13/$last13<br>/;  # line end break
+                    $select[15] =~ s/\Q$last13/$last13<br>/;  # line end break
                     
 (my $last14) = $select[16] =~ /(\s*\S+)\s*$/;
  
-                    $select[16] =~ s/$last14/$last14<br>/;  # line end break                    
+                    $select[16] =~ s/\Q$last14/$last14<br>/;  # line end break                    
 (my $last15) = $select[17] =~ /(\s*\S+)\s*$/;
  
-                    $select[17] =~ s/$last15/$last15<br>/;  # line end break
+                    $select[17] =~ s/\Q$last15/$last15<br>/;  # line end break
         
 (my $last16) = $select[18] =~ /(\s*\S+)\s*$/;
  
-                    $select[18] =~ s/$last16/$last16<br>/;  # line end break
+                    $select[18] =~ s/\Q$last16/$last16<br>/;  # line end break
                     
 (my $last17) = $select[19] =~ /(\s*\S+)\s*$/;
  
-                    $select[19] =~ s/$last17/$last17<br>/;  # line end break
+                    $select[19] =~ s/\Q$last17/$last17<br>/;  # line end break
 
 (my $last18) = $select[20] =~ /(\s*\S+)\s*$/;
  
-                    $select[20] =~ s/$last18/$last18<br>/;  # line end break
+                    $select[20] =~ s/\Q$last18/$last18<br>/;  # line end break
 
 (my $last19) = $select[21] =~ /(\s*\S+)\s*$/;
  
-                    $select[21] =~ s/$last19/$last19<br>/;  # line end break
+                    $select[21] =~ s/\Q$last19/$last19<br>/;  # line end break
 
 (my $last20) = $select[22] =~ /(\s*\S+)\s*$/;
  
-                    $select[22] =~ s/$last20/$last20<br>/;  # line end break
+                    $select[22] =~ s/\Q$last20/$last20<br>/;  # line end break
                     
 (my $last21) = $select[23] =~ /(\s*\S+)\s*$/;
  
-                    $select[23] =~ s/$last21/$last21<br>/;  # line end break and stop added
+                    $select[23] =~ s/\Q$last21/$last21<br>/;  # line end break and stop added
 
 
 
@@ -205,21 +202,21 @@ VLINK=BCEE68
  style=\"font-weight: bold;\">Tape Mark 3</span></big></big>
  
 <font face=Arial size=4>
-<br>A version of Tape Mark 1, by Nanni Balestrini<p><br><div align=\"left\"><b>$tape</b>
+<br>A version of Tape Mark 1, by Nanni Balestrini<p><br><div align=\"center\"><b>$tape</b>
 <br><p>
 <form><input type=\"submit\" value=\"Generate new poem\" action onSubmit=></form>
 <p><br><p><br>
 <font face=Arial size=4 text color =\"#e0e0e0\">
 
 
-
+<div align=\"left\">
 <i>Tape Mark 3</i> is a variation of Nanni Balestrini's <i>Tape Mark 1</i><br>
 The verses of this poem are composed by the first two strophes of the following poems:<br>
 <i>I Wandered Lonely as a Cloud</i> by William Wordsworth;<br>
 <i>Perhaps One Morning Walking</i> by Montale; <br>
-<i>Limits</i> by Jorge Luis Borges; <br>
+<i>Limits</i> by Jorge Luis Borges; <br><div align=\"left\">
 
-<p><br>The sourcecode is <a href='https://github.com/edgedpub/Tape-Mark-3'>here</a> and it was originally written by <a href='http://www.in-vacua.com/cgi-bin/tapemark.pl'>Wayne Clements</a></html>"; 
+<p><br>The sourcecode is <a href='https://github.com/edgedpub/Tape-Mark-3'>here</a> and it was originally written by <a href='http://www.in-vacua.com/cgi-bin/tapemark.pl'>Wayne Clements</a></html>";
 
 
 # fisher yates shuffle
